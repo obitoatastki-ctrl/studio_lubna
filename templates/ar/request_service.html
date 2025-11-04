@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اطلب خدمة - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>اطلب خدمة</h1>
+    <nav>
+        <a href="{{ url_for('index', lang='ar') }}">الرئيسية</a> |
+        <a href="{{ url_for('works', lang='ar') }}">أعمالي</a> |
+        <a href="{{ url_for('request_service', lang='ar') }}">اطلب خدمة</a> |
+        <a href="{{ url_for('pay', lang='ar', request_id=1) }}">الدفع</a>
+    </nav>
+    <div style="text-align:center; margin:10px 0;">
+        <a href="{{ url_for('index', lang='ar') }}">العربية</a> |
+        <a href="{{ url_for('index', lang='en') }}">English</a> |
+        <a href="{{ url_for('index', lang='fr') }}">Français</a>
+    </div>
+</header>
+
+<main>
+    <h2>نموذج طلب الخدمة</h2>
+    <form action="{{ url_for('request_service', lang='ar') }}" method="POST">
+        <label>اسمك:</label>
+        <input type="text" name="name" required><br>
+        <label>البريد الإلكتروني:</label>
+        <input type="email" name="email" required><br>
+        <label>الخدمة المطلوبة:</label>
+        <textarea name="service" required></textarea><br>
+        <button type="submit">إرسال الطلب</button>
+    </form>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

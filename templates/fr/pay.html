@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Paiement - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Paiement</h1>
+    <nav>
+        <a href="{{ url_for('index', lang='fr') }}">Accueil</a> |
+        <a href="{{ url_for('works', lang='fr') }}">Travaux</a> |
+        <a href="{{ url_for('request_service', lang='fr') }}">Demander un service</a> |
+        <a href="{{ url_for('pay', lang='fr', request_id=1) }}">Paiement</a>
+    </nav>
+    <div style="text-align:center; margin:10px 0;">
+        <a href="{{ url_for('index', lang='ar') }}">العربية</a> |
+        <a href="{{ url_for('index', lang='en') }}">English</a> |
+        <a href="{{ url_for('index', lang='fr') }}">Français</a>
+    </div>
+</header>
+
+<main>
+    <h2>Payer pour le service</h2>
+    <p>Vous pouvez payer avec la Carte Or algérienne ou les cartes internationales.</p>
+    <button>Payer maintenant</button>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

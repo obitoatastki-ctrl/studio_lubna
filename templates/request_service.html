@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اطلب خدمة - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>اطلب خدمة</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">الرئيسية</a> |
+        <a href="{{ url_for('works') }}">أعمالي</a> |
+        <a href="{{ url_for('request_service') }}">اطلب خدمة</a> |
+        <a href="{{ url_for('pay', request_id=1) }}">الدفع</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>نموذج طلب الخدمة</h2>
+        <form method="post">
+            <label>اسمك:</label>
+            <input type="text" name="name" required>
+            <label>البريد الإلكتروني:</label>
+            <input type="email" name="email" required>
+            <label>نوع الخدمة:</label>
+            <select name="service">
+                <option value="video">إنتاج فيديو</option>
+                <option value="voice">تعليق صوتي</option>
+            </select>
+            <label>تفاصيل إضافية:</label>
+            <textarea name="details" required></textarea>
+            <button type="submit">إرسال الطلب</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

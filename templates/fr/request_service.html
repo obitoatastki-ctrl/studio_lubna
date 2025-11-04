@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Demander un service - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Demander un service</h1>
+    <nav>
+        <a href="{{ url_for('index', lang='fr') }}">Accueil</a> |
+        <a href="{{ url_for('works', lang='fr') }}">Travaux</a> |
+        <a href="{{ url_for('request_service', lang='fr') }}">Demander un service</a> |
+        <a href="{{ url_for('pay', lang='fr', request_id=1) }}">Paiement</a>
+    </nav>
+    <div style="text-align:center; margin:10px 0;">
+        <a href="{{ url_for('index', lang='ar') }}">العربية</a> |
+        <a href="{{ url_for('index', lang='en') }}">English</a> |
+        <a href="{{ url_for('index', lang='fr') }}">Français</a>
+    </div>
+</header>
+
+<main>
+    <h2>Formulaire de demande de service</h2>
+    <form action="{{ url_for('request_service', lang='fr') }}" method="POST">
+        <label>Nom:</label>
+        <input type="text" name="name" required><br>
+        <label>Email:</label>
+        <input type="email" name="email" required><br>
+        <label>Service demandé:</label>
+        <textarea name="service" required></textarea><br>
+        <button type="submit">Envoyer la demande</button>
+    </form>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

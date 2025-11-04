@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>أعمالي - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>أعمالي</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">الرئيسية</a> |
+        <a href="{{ url_for('works') }}">أعمالي</a> |
+        <a href="{{ url_for('request_service') }}">اطلب خدمة</a> |
+        <a href="{{ url_for('pay', request_id=1) }}">الدفع</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>نماذج أعمالنا</h2>
+        <p>يمكنك مشاهدة أفضل الفيديوهات التي أنجزناها للشركات والأفراد.</p>
+        <!-- هنا يمكن إضافة صور وفيديوهات -->
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

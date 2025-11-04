@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Studio Lobna</h1>
+    <nav>
+        <a href="{{ url_for('index', lang='ar') }}">الرئيسية</a> |
+        <a href="{{ url_for('works', lang='ar') }}">أعمالي</a> |
+        <a href="{{ url_for('request_service', lang='ar') }}">اطلب خدمة</a> |
+        <a href="{{ url_for('pay', lang='ar', request_id=1) }}">الدفع</a>
+    </nav>
+    <div style="text-align:center; margin:10px 0;">
+        <a href="{{ url_for('index', lang='ar') }}">العربية</a> |
+        <a href="{{ url_for('index', lang='en') }}">English</a> |
+        <a href="{{ url_for('index', lang='fr') }}">Français</a>
+    </div>
+</header>
+
+<main>
+    <h2>مرحبا بكم في استوديو لُبنى</h2>
+    <p>نقوم بإنتاج أفضل الأعمال الإعلامية والفيديوهات الاحترافية للشركات والأفراد.</p>
+    <a href="{{ url_for('request_service', lang='ar') }}" class="btn">اطلب خدمة الآن</a>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

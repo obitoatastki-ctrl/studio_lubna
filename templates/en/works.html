@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Works - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Works</h1>
+    <nav>
+        <a href="{{ url_for('index', lang='en') }}">Home</a> |
+        <a href="{{ url_for('works', lang='en') }}">Works</a> |
+        <a href="{{ url_for('request_service', lang='en') }}">Request Service</a> |
+        <a href="{{ url_for('pay', lang='en', request_id=1) }}">Pay</a>
+    </nav>
+    <div style="text-align:center; margin:10px 0;">
+        <a href="{{ url_for('index', lang='ar') }}">العربية</a> |
+        <a href="{{ url_for('index', lang='en') }}">English</a> |
+        <a href="{{ url_for('index', lang='fr') }}">Français</a>
+    </div>
+</header>
+
+<main>
+    <h2>Our Work Samples</h2>
+    <p>You can see the best videos we have produced for companies and individuals.</p>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>طلب خدمة - استوديو لبنة</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <h1>استوديو لبنة</h1>
+    <nav>
+        <a href="/">الرئيسية</a>
+        <a href="/about">من نحن</a>
+        <a href="/services">خدماتنا</a>
+        <a href="/works">أعمالنا</a>
+        <a href="/request">اطلب خدمة</a>
+        <a href="/contact">اتصل بنا</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>اطلب خدمة</h2>
+        <form action="/request" method="post">
+            <label>الاسم الكامل:</label><br>
+            <input type="text" name="name" required><br>
+            <label>البريد الإلكتروني:</label><br>
+            <input type="email" name="email" required><br>
+            <label>رقم الهاتف:</label><br>
+            <input type="tel" name="phone"><br>
+            <label>الخدمة المطلوبة:</label><br>
+            <select name="service">
+                <option>تصميم فيديو</option>
+                <option>تعليق صوتي</option>
+                <option>إعلان رقمي</option>
+            </select><br>
+            <label>تفاصيل إضافية:</label><br>
+            <textarea name="details"></textarea><br>
+            <button type="submit">إرسال الطلب</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © 2025 استوديو لبنة</p>
+</footer>
+</body>
+</html>

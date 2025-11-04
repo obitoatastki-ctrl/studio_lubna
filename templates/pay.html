@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>الدفع - Studio Lobna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>الدفع</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">الرئيسية</a> |
+        <a href="{{ url_for('works') }}">أعمالي</a> |
+        <a href="{{ url_for('request_service') }}">اطلب خدمة</a> |
+        <a href="{{ url_for('pay', request_id=1) }}">الدفع</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>رفع إثبات الدفع</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label>إثبات الدفع (صورة أو PDF)</label>
+            <input type="file" name="receipt" accept=".png,.jpg,.jpeg,.pdf" required>
+            <label>ملاحظة (اختياري)</label>
+            <textarea name="note"></textarea>
+            <button type="submit">رفع الإثبات</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Studio Lobna</p>
+</footer>
+</body>
+</html>
